@@ -1,0 +1,13 @@
+name = "gatekeeper-agent"
+main = "worker.js"
+compatibility_date = "2026-11-15"
+
+# Workers Free: no credit card, email-only signup at dash.cloudflare.com/sign-up.
+# Bindings (set in Dashboard -> Workers & Pages -> Settings, or via wrangler):
+#   HMAC_SECRET = the 32-byte platform-generated secret (Variables -> Add secret)
+#   SEEN        = a KV namespace (Workers KV -> Create namespace, then bind as SEEN)
+# If deploying with wrangler, uncomment and fill in the KV id from
+# `wrangler kv namespace create SEEN`:
+# [[kv_namespaces]]
+# binding = "SEEN"
+# id = "<kv-namespace-id>"
